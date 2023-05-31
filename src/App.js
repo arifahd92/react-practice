@@ -1,12 +1,9 @@
-
 import React from 'react'
-import Khatabook from './component/Khatabook'
-import Optemize from './usememo/Optemize'
-
+import Todo2 from './todo/Todo2'
 export default function App() {
   return (
     <div>
-    <Optemize/>
+      <Todo2/>
     </div>
   )
 }

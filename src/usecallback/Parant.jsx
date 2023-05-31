@@ -12,7 +12,11 @@ let v = 5
 // }
 
 let fun = useCallback(()=>{// like useEffect bas fxn variable me assigend
+  let i=0;
+  while(i<1000000000)
+  i++
   console.log("hey arif how are you ")
+  setincrementtwo(incrementtwo+1)
 },[incrementtwo])
 
   function one(){
@@ -23,7 +27,9 @@ let fun = useCallback(()=>{// like useEffect bas fxn variable me assigend
       <h1>i m parant</h1>
       <button onClick={one} > one: {incrementone} </button>
       {/* <Child/> without usecallback */}
-      <Child incrementtwo={incrementtwo} setincrementtwo={setincrementtwo} v={v} fun={fun}/>// memo failed jaise hi fxn ko as a prop pass kiya
+   
+    <Child incrementtwo={incrementtwo} fun={fun}/>
+      // memo failed jaise hi fxn ko as a prop pass kiya even if fxn is not being called in child yet child started rerendring on rendring parent
 
       </div>
     )
