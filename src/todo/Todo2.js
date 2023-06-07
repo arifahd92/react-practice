@@ -30,7 +30,7 @@ export default function App(){
   data.map((item,ind)=>{
      return(
       <>
-<h1 key={ind}>{item}</h1><button onClick={()=>handledelete(ind)}>delete</button> btn
+<h1 key={ind}>{item}</h1><button onClick={()=>handledelete(ind)}>delete</button> 
 
       </>
      )
