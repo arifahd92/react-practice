@@ -5,11 +5,14 @@ import Lifecycle from "./UseeffectHook/Lifecycle";
 import Reducer from "./useReducer/Reducer";
 import SellerPage from "./sellerAdminPage/SellerPage";
 import Header from "./foodOrderApp/Layout/Header";
+import Meals from "./foodOrderApp/Meals/Meals";
 
 export default function App() {
   return (
-    <div>
+    <>
       <Header />
-    </div>
+      <Meals />
+      <h1>hello</h1>
+    </>
   );
 }
