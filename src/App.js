@@ -12,7 +12,7 @@ export default function App() {
     <>
       <Header />
       <Meals />
-      <h1>hello</h1>
+      <h1>i m jinda</h1>
     </>
   );
 }
