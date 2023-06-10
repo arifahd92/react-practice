@@ -1,13 +1,30 @@
-import React from "react";
-import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import { useState } from "react";
+
 import Header from "./foodOrderApp/Layout/Header";
 import Meals from "./foodOrderApp/Meals/Meals";
+import Cart from "./foodOrderApp/Cart/Cart";
+import CartProvider from "./store/CartProvider";
 
-export default function App() {
+function App() {
+  const [cartIsShown, setCartIsShown] = useState(false);
+
+  const showCartHandler = () => {
+    setCartIsShown(true);
+  };
+
+  const hideCartHandler = () => {
+    setCartIsShown(false);
+  };
+
   return (
-    <>
-      <Header />
-      <Meals />
-    </>
+    <CartProvider>
+      {cartIsShown && <Cart onClose={hideCartHandler} />}
+      <Header onShowCart={showCartHandler} />
+      <main>
+        <Meals />
+      </main>
+    </CartProvider>
   );
 }
+
+export default App;
