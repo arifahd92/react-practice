@@ -5,8 +5,9 @@ export default function Lifecycle() {
   const [count, setCount] = useState(false);
   useEffect(() => {
     console.log("component did mount");
+
     return () => {
-      console.log("component will unmount");
+      console.log("will unmount");
     };
   }, []);
   useEffect(() => {
@@ -14,7 +15,11 @@ export default function Lifecycle() {
   }, [count]);
   return (
     <div>
-      {count && <AnotherComponent />}
+      {count && (
+        <>
+          <AnotherComponent count={count} setCount={setCount} />{" "}
+        </>
+      )}
       {!count && (
         <>
           <div>{"first page qwertyuiopsdfghjklrtyujkl"}</div>

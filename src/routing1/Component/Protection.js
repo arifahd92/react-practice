@@ -8,7 +8,7 @@ export default function Protection(props) {
         let loggedin = JSON.parse(localStorage.getItem("login"))
         console.log(loggedin)
         if (!loggedin) {
-            alert("log in fist")
+            alert("log in first")
             navigate("/")
         }
 

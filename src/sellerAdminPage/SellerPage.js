@@ -71,7 +71,14 @@ export default function SellerPage() {
   };
 
   return (
-    <div>
+    <div className="container">
+      <div class="row">
+        <div class="alert alert-success" role="alert">
+          <h4 class="alert-heading">uuu</h4>
+          <p>gtuu</p>
+          <p class="mb-0"></p>
+        </div>
+      </div>
       <input
         type="number"
         value={item.id}
