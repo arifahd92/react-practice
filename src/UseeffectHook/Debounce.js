@@ -28,7 +28,8 @@ export default function Debounce() {
       const data = await res.json();
       setItem(data);
       console.log(
-        "being callet at interval of 1 second on each clik jab cleanup fxn was not used, but after cleanup function cleanup function clearing timeout and then it is setting ,if in typing there is delay of 1 second api being fetched"
+        "being callet at the delay  of 1 second on each clik jab cleanup fxn was not used, but after"
+        // cleanup function cleanup function clearing timeout and then it is setting ,if in typing there is delay of 1 second api being fetched"
       );
     }, 1000);
     return () => {

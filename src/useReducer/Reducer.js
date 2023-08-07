@@ -4,6 +4,8 @@ const reducerFunction = (state, action) => {
         //action me dispatched object aata hai
         if (action.value.length > 6) {
             return { ...state, val: action.value, isValid: true };
+            // IMP you have to return a newly created state donot modify state directly
+            //like state.val=action.value
         } else {
             return { ...state, val: action.value, isValid: false };
         }

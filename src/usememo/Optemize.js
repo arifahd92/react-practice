@@ -24,6 +24,7 @@ export default function Optemize() {
 
     // usememo useCallback blkl useEffect ki tarah bas in dono ko usi fxn name k varible me assigned to that fxn 
     let even=useMemo(()=>{
+      //heavy calculation
         let i = 0;
         console.log("even fxn got called")
             while(i<900000000){
