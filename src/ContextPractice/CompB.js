@@ -1,9 +1,5 @@
-import React from 'react'
+import React from "react";
 
 export default function CompB() {
-  return (
-    <div>
-       im comp b i will also use context value
-    </div>
-  )
+  return <div>im comp b i will also use context value</div>;
 }

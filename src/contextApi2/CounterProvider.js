@@ -1,13 +1,13 @@
-import React, { useState } from 'react'
-import { Context } from './CounterContxt'
+import React, { useState } from "react";
+import { Context } from "./CounterContxt";
 
 export default function CounterProvider(props) {
-  const [state, setState] = useState(0)
+  const [state, setState] = useState(0);
   function increment() {
-    setState((current) => current + 1)
+    setState((current) => current + 1);
   }
   function decrementValue() {
-    setState((current) => current - 1)
+    setState((current) => current - 1);
   }
   return (
     <div>
@@ -15,6 +15,6 @@ export default function CounterProvider(props) {
         {props.children}
       </Context.Provider>
     </div>
-  )
+  );
 }
 //CounterProvider ko app me use karenge
